@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html class=graydient dir=ltr itemscope itemtype=https://schema.org/VisualArtwork lang=en>
-<meta charset=utf-8>
-<meta name=apple-mobile-web-app-capable content=yes>
-<meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
-<meta name=apple-mobile-web-app-title content=Graydients>
-<meta name=application-name content=Graydients>
-<meta name=description property=og:description content="Click or tap the shuffle icon to see another gradient. Gradients can be horizontal, vertical, or radial, but are always gray.">
-<meta name=viewport content="initial-scale=1,user-scalable=no,width=device-width">
-<meta property=fb:admins content=509248955>
-<meta property=og:image content=http://graydients.com/apple-touch-icon-precomposed.png>
-<meta property=og:title content="Graydients">
-<meta property=og:type content=website>
-<meta property=og:url content=http://graydients.com/>
+<html class=graydient dir="ltr" itemscope itemtype=https://schema.org/VisualArtwork lang="en">
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Graydients">
+<meta name="application-name" content="Graydients">
+<meta name="description" content="Click or tap the shuffle icon to see another gradient. Gradients can be horizontal, vertical, or radial, but are always gray.">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
+<meta property="fb:admins" content="509248955">
+<meta property="og:description" content="Click or tap the shuffle icon to see another gradient. Gradients can be horizontal, vertical, or radial, but are always gray.">
+<meta property="og:image" content="http://graydients.com/apple-touch-icon-precomposed.png">
+<meta property="og:title" content="Graydients">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://graydients.com/">
 <title itemprop=name>Graydients</title>
 <link rel=apple-touch-icon-precomposed href=http://graydients.com/apple-touch-icon-precomposed.png>
-<link rel=author href=//alexanderchristiaanjacob.com/>
-<link rel=canonical href=//graydients.com/>
-<link rel="shortcut icon" href=favicon.ico>
-<link rel=stylesheet href=//mimesia.net/style/foundation-icons.css>
+<link rel="author" href="https://alexanderchristiaanjacob.com/" title="Alexander Christiaan Jacob">
+<link rel="canonical" href="https://graydients.com/">
+<link rel="stylesheet" href="https://mimesia.net/style/foundation-icons.css">
 <style>
     a{color:#fff;left:1.5em;line-height:1.5;position:absolute;text-decoration:none;text-shadow:0 1px 1px rgba(0,0,0,.75);top:1.5em}body,html{min-height:100%}.graydient{background:#444;background:-moz-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#444),color-stop(100%,#888));background:-webkit-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-o-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-ms-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:radial-gradient(ellipse at center,#444 0%,#888 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#444',endColorstr='#444',GradientType=1);}</style>
 <script>
@@ -31,11 +31,12 @@
     ga('send', 'pageview');
 
 </script>
-<a class=fi-shuffle href=//graydients.com/></a>
+<a class="fi-shuffle"  href="https://graydients.com/"></a>
 <script>
     "use strict";
 
     var shuffle = document.querySelector('.fi-shuffle');
+    var graydient = document.querySelector('.graydient');
 
     shuffle.onclick = function(e) {
         e.preventDefault();
@@ -47,6 +48,21 @@
         }
     };
 
+    // https://stackoverflow.com/a/1484514/1546457
+    function random_color() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        var gray = '';
+
+        for (var i = 0; i < 2; i++) {
+            gray += letters[Math.floor(Math.random() * 16)];
+        }
+
+        color += gray + gray + gray;
+
+        return color;
+    }
+
     function random_linear_gradient() {
         if(Math.random() > .5) {
             random_linear_gradient_2();
@@ -56,11 +72,22 @@
     }
 
     function random_linear_gradient_2() {
-        console.log('random_linear_gradient_2');
+        var c1 = random_color();
+        var c2 = random_color();
+
+        console.log('random_linear_gradient_2', c1, c2);
+
+        graydient.style.backgroundImage = 'linear-gradient(to right, ' + c1 + ', ' + c2 + ')';
     }
 
     function random_linear_gradient_3() {
-        console.log('random_linear_gradient_3');
+        var c1 = random_color();
+        var c2 = random_color();
+        var c3 = random_color();
+
+        console.log('random_linear_gradient_3', c1, c2, c3);
+
+        graydient.style.backgroundImage = 'linear-gradient(to right, ' + c1 + ', ' + c2 + ', ' + c3 + ')';
     }
 
     function random_radial_gradient() {
@@ -72,11 +99,22 @@
     }
 
     function random_radial_gradient_2() {
-        console.log('random_radial_gradient_2');
+        var c1 = random_color();
+        var c2 = random_color();
+
+        console.log('random_radial_gradient_2', c1, c2);
+
+        graydient.style.backgroundImage = 'radial-gradient(ellipse at center, ' + c1 + ', ' + c2 + ')';
     }
 
     function random_radial_gradient_3() {
-        console.log('random_radial_gradient_3');
+        var c1 = random_color();
+        var c2 = random_color();
+        var c3 = random_color();
+
+        console.log('random_radial_gradient_3', c1, c2, c3);
+
+        graydient.style.backgroundImage = 'radial-gradient(ellipse at center, ' + c1 + ', ' + c2 + ', ' + c3 + ')';
     }
 
 

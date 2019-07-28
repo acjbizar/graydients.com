@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "version": "20190728",
+    "name": "Graydients",
+    "default_locale": "en",
+    "description": "Click or tap the shuffle icon to see another gradient. Gradients can be horizontal, vertical, or radial, but are always gray.",
+    "author": "Alexander Christiaan Jacob",
+    "theme_color": "#cccccc",
+    "homepage_url": "https://graydients.com/",
+    "start_url": "https://graydients.com/",
+    "icons": [
+        {
+            "src": "https://graydients.com/apple-touch-icon-precomposed.png"
+        }
+    ],
+    "display": "fullscreen"
+}

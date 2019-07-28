@@ -1,2 +1,3 @@
-# graydients.com
-Click or tap for more gray.
+# Graydients
+
+Interactive Internet artwork. Click or tap for more gray.

@@ -30,17 +30,6 @@
     <style>
         a{color:#fff;left:1.5em;line-height:1.5;position:absolute;text-decoration:none;text-shadow:0 1px 1px rgba(0,0,0,.75);top:1.5em}body,html{color:#fff;min-height:100%}.graydient{background:#444;background:-moz-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-webkit-gradient(radial,center center,0px,center center,100%,color-stop(0%,#444),color-stop(100%,#888));background:-webkit-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-o-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:-ms-radial-gradient(center,ellipse cover,#444 0%,#888 100%);background:radial-gradient(ellipse at center,#444 0%,#888 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#444',endColorstr='#444',GradientType=1);}
     </style>
-    <script>
-
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-6227584-61', 'auto');
-        ga('send', 'pageview');
-
-    </script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -64,6 +53,7 @@
 </head>
 <body>
 <a class="fi-shuffle"  href="https://graydients.com/"></a>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6227584-61"></script>
 <script>
     "use strict";
 
@@ -152,6 +142,12 @@
     }
 
     random_gradient();
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-6227584-61');
 </script>
 </body>
 </html>

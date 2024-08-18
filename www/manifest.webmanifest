@@ -1,0 +1,19 @@
+{
+  "$schema": "https:\/\/json.schemastore.org\/web-manifest-combined.json",
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Graydients",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://graydients.com/apple-touch-icon-precomposed.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "scope": "/",
+  "id": "https://graydients.com/",
+  "theme_color": "white",
+  "background_color": "black"
+}
